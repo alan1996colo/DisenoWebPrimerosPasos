@@ -1,3 +1,59 @@
 body {
     background-color:blue;
 }
+a{
+    color: green;
+    
+}
+a:hover {/*Cuando se señala*/
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;/*subrayado*/
+  }
+  article {
+    margin: 0;
+    padding: 5px;
+    background-color: lightgray;
+    width: 50%;
+    float: left;
+  }
+  
+  section {
+    background: white;
+  
+   
+
+  }
+  div{
+    background-color:aqua;
+    float: left;
+    margin-top: 20px; /* Ajusta el espacio superior según tus preferencias */
+    margin-left: 20px; /* Ajusta el espacio izquierdo según tus preferencias */
+
+  }
+  #demo{
+    background-color: yellow;
+  }
+  footer{
+    background-color: yellow;
+  }
+  /* Estilos para el contenedor principal */
+
+
+
+
+/* Estilos para el aside */
+aside {
+    float:right;
+    width: 44%;
+    flex: 0 0 30%; /* Tamaño fijo del aside (ajusta según tus necesidades) */
+    background-color: #f0f0f0; /* Color de fondo opcional */
+    padding: 20px; /* Espacio interno opcional */
+}
+nav{
+    background-color: black;
+    padding: 20px;
+}
+nav a {
+    margin-right: 10px; /* Añade espacio a la derecha de cada enlace (ajusta el valor según tus preferencias) */
+}

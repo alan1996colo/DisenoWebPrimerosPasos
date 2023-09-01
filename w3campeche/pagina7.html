@@ -6,50 +6,150 @@
         Scripts y forms
     </title>
     <link rel="stylesheet" href="styles3.css">
+    <!--los script van en el header-->
+    <script>
+        function myFunction() {
+            document.getElementById("modificar").innerHTML = "Hello JavaScript!";
+            document.getElementById("modificar").style.fontSize = "25px";
+            document.getElementById("modificar").style.textAlign = "center";
+            document.getElementById("modificar").style.blockSize = "25px";
+            document.getElementById("modificar").style.width = "70%";
+            document.getElementById("modificar").style.color = "red";
+            document.getElementById("modificar").style.backgroundColor = "yellow";
+        }
+        function cambiarImagen(sw) {
+            var pic;
+            if (sw == 0) {
+                pic = "../imagenes/kakashi1.png"
+            } else {
+                pic = "../imagenes/kakashi2.png"
+            }
+            document.getElementById('myImage').src = pic;
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="description" content="Comenzando programacion web">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Alan Echabarri">
+    <meta http-equiv="refresh" content="15"><!--actualiza la pagina cada 15seg-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--configuracion grafica para que la pagina se vea bien en todos los dispositivos-->
+
+
+
 </head>
+<nav>
+    <a href="ejemplo.html">HTML basico</a> |
+    <a href="pagina2.htm">Hoja de vida</a> |
+    <a href="pagina3.html">Estilos y colores</a> |
+    <a href="pagina5.html">Tablas y listas </a>
+    <a href="pagina6.html"><b>Volver atras</b></a>
+</nav>
 
 <body>
-    <h3> JavaScripts</h3>
-    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
-        Click me to display Date and Time.</button>
-    <p id="demo"></p>
-    <p id="modificar">JavaScript can change the style of an HTML element.</p><!--al parecer el id debe estar antes que el codigo javaScripts-->
-   
+    <section>
+        <h3> JavaScripts</h3>
+        <button type="button" onclick="document.getElementById('demo').innerHTML = Date() ">
+            Click me to display Fecha y Hora.</button>
+        <p id="demo"></p>
+        <p id="modificar">JavaScript can change the style of an HTML element.</p>
+        <!--al parecer el id debe estar antes que el codigo javaScripts-->
+        <button type="button" onclick="myFunction()">Click Me!</button>
+        <p>formato de <mark>codigo</mark>:
+            <code>
+        var person;
+        </code>
+        </p>
+        <p>se pueden definir variables asi nomas?:
+            <var>
+                x
+            </var>
+            = 3 + 2;
+        </p>
+        <p> aqui mostraremos la<kbd> fuente mono espaciada</kbd> con kbd</p>
+        <!--The HTML <samp> element is used to define sample output from a computer program. The content inside is displayed in the browser's default monospace font.-->
+        <p> SAMP FORMATO EJEMPLO: <br><samp>File not found.<br>Press F1 to continue</samp></p>
+    </section>
+
+    <aside>
+        <figure><img src="../imagenes/Semantic.png" alt="html semantico" width="65%"></figure>
+        <figcaption> imagen de html semantico</figcaption>
+    </aside>
+
+    <article>
+        <h1>The article element</h1>
+        <h2>Google Chrome</h2>
+        <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web
+            browser today!</p>
+    </article>
+
+    <article>
+        <h2>Mozilla Firefox</h2>
+        <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular
+            web browser since January, 2018.</p>
+    </article>
+
+    <article>
+        <h2>Microsoft Edge</h2>
+        <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet
+            Explorer.</p>
+    </article>
+    <div>
 
 
 
-<script>
-function myFunction() {
-    document.getElementById("modificar").innerHTML = "Hello JavaScript!";
-  document.getElementById("modificar").style.fontSize = "25px"; 
-  document.getElementById("modificar").style.color = "red";
-  document.getElementById("modificar").style.backgroundColor = "yellow";        
-}
-</script>
 
-<button type="button" onclick="myFunction()">Click Me!</button>
+        <!-- El elemento <base> especifica la URL base y/o el destino de todas las URL relativas de una página.
 
-    <a href="pagina6.html">Volver atras</a>
-</body>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas corrupti amet enim, cumque consequatur reiciendis
-    blanditiis, nostrum provident quae quaerat officia doloribus mollitia similique. Iure in blanditiis id nisi ullam.
-</p>
+La etiqueta <base> debe tener presente un atributo href o target, o ambos.
 
-<img id="myImage" src="../imagenes/kakashi1.png">
-<p>
-    <button type="button" onclick="cambiarImagen(1)">Sharingan</button>
-    <button type="button" onclick="cambiarImagen(0)">No Sharingan</button>
+¡Solo puede haber un único elemento <base> en un documento!-->
+        <p><a href="ejemplo.html"><b>HTML base tag</b></a> - Notice that the link opens in a new window, even if it has
+            no
+            target="_blank" attribute. This is because the target attribute of the base element is set to "_blank".</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas corrupti amet enim, cumque consequatur
+            reiciendis
+            blanditiis, nostrum provident quae quaerat officia doloribus mollitia similique. Iure in blanditiis id nisi
+            ullam.
+        </p>
+        <p>I will display &euro;</p>
+        <p>I will display &#8364;</p>
+        <p>I will display &#8709;</p>
+        <p>I will display &#9829;</p>
+        <p>I will display &#174;</p>
+        <p>I will display &#128516;</p>
+        <p>I will display &#128525;</p>
+        <p>I will display &#128535;</p>
+
+        
+
+    </div>
+
+    <img title="Cada cierto tiempo kakashi se cansa y cierra el ojo" id="myImage" src="../imagenes/kakashi1.png"
+        alt="kakashi" style="width: 70%;"><!-- Hay que poner los sizes en % para diseño responsivo-->
+    <p>
+        <button type="button" onclick="cambiarImagen(1)">Sharingan</button>
+        <button type="button" onclick="cambiarImagen(0)">No Sharingan</button>
     </p>
-<script>
-    function cambiarImagen(sw) {
-      var pic;
-      if (sw == 0) {
-        pic = "../imagenes/kakashi1.png"
-      } else {
-        pic = "../imagenes/kakashi2.png"
-      }
-      document.getElementById('myImage').src = pic;
-    }
-    </script>
+
+
+    <footer>
+        <p style="font-size:  25px;"> <b>A <q>footer</q> element typically contains:</b>
+        <ul>
+            <li>Authorship information</li>
+            <li> Copyright information</li>
+            <li>Contact information</li>
+            <li>Sitemap</li>
+            <li> Back to top links</li>
+            <li>Related documents</li>
+
+        </ul>
+        </p>
+        <p>Author: <a href="mailto:alanechabarri@gmail.com">Alan Echabarri </a></p>
+    </footer>
+</body>
+
+
 
 </html>
