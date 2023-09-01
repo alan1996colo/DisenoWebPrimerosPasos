@@ -1,0 +1,55 @@
+<!Doctype html>
+<html lang="es">
+
+<head>
+    <title>
+        Scripts y forms
+    </title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+
+<body>
+    <h3> JavaScripts</h3>
+    <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+        Click me to display Date and Time.</button>
+    <p id="demo"></p>
+    <p id="modificar">JavaScript can change the style of an HTML element.</p><!--al parecer el id debe estar antes que el codigo javaScripts-->
+   
+
+
+
+<script>
+function myFunction() {
+    document.getElementById("modificar").innerHTML = "Hello JavaScript!";
+  document.getElementById("modificar").style.fontSize = "25px"; 
+  document.getElementById("modificar").style.color = "red";
+  document.getElementById("modificar").style.backgroundColor = "yellow";        
+}
+</script>
+
+<button type="button" onclick="myFunction()">Click Me!</button>
+
+    <a href="pagina6.html">Volver atras</a>
+</body>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas corrupti amet enim, cumque consequatur reiciendis
+    blanditiis, nostrum provident quae quaerat officia doloribus mollitia similique. Iure in blanditiis id nisi ullam.
+</p>
+
+<img id="myImage" src="../imagenes/kakashi1.png">
+<p>
+    <button type="button" onclick="cambiarImagen(1)">Sharingan</button>
+    <button type="button" onclick="cambiarImagen(0)">No Sharingan</button>
+    </p>
+<script>
+    function cambiarImagen(sw) {
+      var pic;
+      if (sw == 0) {
+        pic = "../imagenes/kakashi1.png"
+      } else {
+        pic = "../imagenes/kakashi2.png"
+      }
+      document.getElementById('myImage').src = pic;
+    }
+    </script>
+
+</html>

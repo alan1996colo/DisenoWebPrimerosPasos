@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>
+        tablas y mas
+    </title>
+
+    <link rel="stylesheet" href="styles2.css">
+</head>
+
+<body> <!--fondo de la pagina. -->
+
+    <ul><!-- style="list-style-type:square;"para elegir si queremos que sea punto, cuadrado, guion ,etc-->
+        <li><a href="#home" title="Por el momento esto no hace nada">Home</a></li>
+        <li><a href="#news" title="esto tampoco">News</a></li>
+        <li><a href="#contact" title="ni esto">Contact</a></li>
+        <li><a href="#about" title="esto menos">About</a></li>
+        <li><a href="pagina5.html" title="volver a la anterior pag">PAGINA ANTERIOR</a></li>
+    </ul>
+    <h1 style="text-align: center;  border: 2px solid black;">
+        <i>Seguimos con html.</i>
+    </h1><img src="../imagenes/naruto.jpg" alt="Foto de naruto" width="479" style="position: absolute;
+        top: 39%;
+        left: 50%;
+        transform: translate(-50%, -50%);"><img>
+    <p title=" consejo" style="font-family: courier;"> Otra fuente <br></p><!-- <br> genera el salto de linea -->
+
+    <p>My mother has <span style="color:blue;font-weight:bold;">blue</span> eyes and my father has <span
+            style="color:darkolivegreen;font-weight:bold;">dark green</span> eyes.</p>
+    <table>
+        <tr>
+            <th colspan="2">personas</th>
+
+
+        </tr>
+        <tr>
+            <th>Alumno</th>
+            <th>Maestro</th>
+            <th>DIA</th>
+
+        </tr>
+        <tr>
+            <td rowspan="2"> Jaimito</td>
+            <td> Ramon</td>
+            <td> Jueves</td>
+        </tr>
+        <tr>
+
+            <td> Ricardo</td>
+            <td> Martes</td>
+        </tr>
+    </table>
+
+
+
+    <hr> <!-- esto hace una regla horizontal-->
+    <dl> Description List:
+        <dd> termino en dl</dd>
+        <dd> Lorem ipsum dolor sit amet consectetur adipisicing elit. At et quia distinctio animi provident nostrum
+            inventore? Libero inventore nostrum laudantium consectetur architecto, velit aspernatur similique numquam
+            magni nemo iusto illum. en dl</dd>
+        <dd> termino en dl</dd>
+    </dl>
+
+    <!-------------------------FORMULARIO.------------------ -->
+    <form action="pagina2.htm" method="GET"><!-----------ACCION DEL FORM------------------ -->
+        <label for="curso">Curso: </label>
+        <input id="curso" type="text" placeholder="Ingrese un curso" name="curso">
+        <button type="submit">Enviar</button>
+    </form>
+
+
+
+
+
+
+<!-------------------------IFRAME.------------------ -->
+
+    <iframe  src="pagina7.html" height="400" width="1000" title="vistazo a la siguiente pagina"></iframe>
+    <button onclick="document.location='pagina7.html'">Siguiente pagina</button>
+
+
+<!-------------------------ACCIONES.------------------ -->
+
+<button onclick="myFunction()">ESCONDER/MOSTRAR ELEMENTOS</button>
+<script>
+    function myFunction() {
+      var x = document.getElementsByClassName("city");
+      for (var i = 0; i < x.length; i++) {
+        if(x[i].style.display == "none"){
+            x[i].style.display ="";
+        }
+        else{ x[i].style.display = "none";}
+       
+      }
+    }
+    </script>
+
+    <div class="city">
+        <h2>London</h2>
+        <p>London is the capital of England.</p>
+    </div>
+
+    <div class="city">
+        <h2>Paris</h2>
+        <p>Paris is the capital of France.</p>
+    </div>
+
+    <div class="city">
+        <h2>Tokyo</h2>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+</body>
+
+</html>

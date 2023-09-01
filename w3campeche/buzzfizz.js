@@ -30,4 +30,4 @@ function fizzbuzz(num) {
 }
 const argumento = process.argv[2];// input del usuario
 const numero = parseInt(argumento);// no se si es necesario, porque es javaScript xd
-console.log(buzzfizz(argumento));//imprimir por pantalla
+//imprimir por pantalla

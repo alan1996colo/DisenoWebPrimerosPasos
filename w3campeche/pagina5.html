@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="EN">
+
+<head>
+    <title>css externo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>This is a heading</h1>
+    <details>
+        <summary id="ARRIBA">Menu</summary> <!-- Esto hace un menu desplazable-->
+        <li><a href="#ABAJO">IR ABAJO</a></li>
+        <li><a href="pagina6.html">siguiente pagina</a></li>
+        <li><a href="#FireFox">FireFox</a></li>
+        <li><a href="#Opera">Opera</a></li>
+    </details>
+
+    <p ><b>This text is bold</b></p>
+    <p><strong>This text is strong</strong></p>
+    <p><i>This text is italic</i></p>
+    <p><em>This text is emphasized</em></p>
+    <small>This is some smaller text.</small>
+    <p>This is<sub> subscript</sub> and <sup>superscript</sup></p>
+    <p>My favorite color is <del>blue</del> <ins>red</ins>.</p>
+    <p>This is a paragraph <span> Aqui hay un span, un elemento html sin ningun significado</span>.</p>
+    <h5>LISTA</h5>
+    <ul>
+        <li>Coffee</li><img src="../imagenes/plantadetomate.jpg" title="imagen a la derecha"
+        alt="planta de tomate sin frutos" style="width:200px;height:200px;float:right;">
+        
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+    <h5>LISTA ORDENADA</h5>
+    <ol type="A"><!--muestra ordenada en letras en mayuscula-->
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+    <h5>LISTA descripcion</h5>
+    <dl>
+        <dt>Coffee</dt>
+        <dd>- black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+    </dl>
+    <!--TABLAS-->
+    <table>
+        <tr> <!--FLA 1-->
+            <th>Company</th><!--th negrita-->
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr><!--FLA 2-->
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+        </tr>
+        <tr><!--FLA 3-->
+            <caption>Caption</caption>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+        </tr>
+        <tr><!--FLA 4-->
+            <th>este texto esta en negrita</th>
+            <td>Lorem ipsum dolor sit</td>
+            <td> amet, consectetur adipisicing elit.</td>
+        </tr>
+    </table>
+    <a href="pagina4.html" title="Esto abrira pagina 4 en otra pestaña" target="_blank">abrir pagina4</a>
+    <!--con target blank abrimos la pagina en otra pestaña-->
+
+    <a href="ejemplo.html"><img src="../imagenes/plantadetomate.jpg" title="si presionas esta imagen te lleva a la pagina1"
+            alt="planta de tomate sin frutos" style="width:42px;height:42px;">
+            
+
+    </a><br>
+    <a href="https://www.w3schools.com/" target="_parent">Visit W3Schools!</a>
+
+    <a href="mailto:alanechabarri@gmail.com">Send email</a>
+    <button onclick="document.location='pagina3.html'">Volver a la pagina 3</button>
+    <br>
+    <a id="ABAJO" href="#ARRIBA">VOLVER ARRIBA</a>
+    
+</body>
+
+</html>

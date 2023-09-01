@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cambiar imágenes</title>
+</head>
+<body>
+  <img id="imagen" src="../imagenes/naruto.jpg">
+
+  <script>
+    var imagenes = ["../imagenes/naruto.jpg", "../imagenes/memeciber2.png", "../imagenes/plantadetomate.jpg"];
+
+    // Cambia la imagen cada 5 segundos
+    setInterval(function() {
+      // Obtiene la siguiente imagen de la lista
+      var imagen = imagenes.shift();
+
+      // Establece la imagen actual
+      document.getElementById("imagen").src = imagen;
+    }, 5000);
+  </script>
+</body>
+</html>
