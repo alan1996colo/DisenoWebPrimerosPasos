@@ -6,8 +6,10 @@ Continuando con el curso de la universidad tecnologica de campeche Y <a href=htt
  - [ ] Graficos de html
  - [ ] Medios HTML
  - [ ] API HTML
- - [ ] EJEMPLOS HTML
- - [ ] REFERENCIAS HTML
  - [ ] CSS
- - [ ]JavaScript
+ - [ ] JavaScript
+ - [ ] Bootstrap
+ - [ ] vue.js
+ - [ ] Angular
+ 
  
