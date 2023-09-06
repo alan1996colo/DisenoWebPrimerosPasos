@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Testimonio de cliente</title>
+    <title> Testimonios y forms</title>
 
     <script>
         // Array de nombres de mujer
-        const nombresMujer = ["Ana Rodriguez", "María Baez", "Laura Gamboa", "Sofía Lopez", "Elena Lopez","Elena Murfi", "Isabel Herrera", "Lucía Diaz", "Carmen Farias", "Marta Farias","Carmen Diaz" ,"Marta Perez", "Luisa Britos"];
+        const nombresMujer = ["Ana Rodriguez", "María Baez", "Laura Gamboa", "Sofía Lopez", "Elena Lopez", "Elena Murfi", "Isabel Herrera", "Lucía Diaz", "Carmen Farias", "Marta Farias", "Carmen Diaz", "Marta Perez", "Luisa Britos"];
 
         // Función para obtener un nombre aleatorio
         function nombreAleatorio() {
@@ -19,7 +19,7 @@
         // Función para actualizar el contenido de todos los elementos <p> con la clase "nombre"
         function actualizarNombres() {
             const elementosNombre = document.querySelectorAll(".nombre");
-            elementosNombre.forEach(function(elemento) {
+            elementosNombre.forEach(function (elemento) {
                 const nombre = nombreAleatorio();
                 elemento.textContent = nombre;
                 // También actualiza el contenido de <p class="card-name">
@@ -46,14 +46,15 @@ para que a partir de una cantidad de px cambie se usa @media(300px)
         font-family: sans-serif;
         text-align: center;
     }
- 
+
     h1 {
-  color: white;
-  font-size: 40px;
-}
+        color: white;
+        font-size: 40px;
+    }
+
     h2 {
-  color: rgb(250, 27, 98);
-}
+        color: rgb(250, 27, 98);
+    }
 
     .card {
         text-align: left;
@@ -67,115 +68,240 @@ para que a partir de una cantidad de px cambie se usa @media(300px)
         border-radius: 10px;
         padding: 0px 30px;
         width: 800px;
-        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.333);      
+        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.333);
 
     }
-    .card-info{
-        padding: 50px;        
+
+    .card-info {
+        padding: 50px;
     }
-    .card-photo{
+
+    .card-photo {
         justify-content: center;
-     text-align: center;
+        text-align: center;
     }
-    .card-user{
+
+    .card-user {
         margin: 5px 0;
         color: gray;
     }
+
     .card-name {
-  font-size: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-    img{
-        width: 200px;
-     /*   border-radius: 20px 40px;*/
-     border-radius: 50%;
-    
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
     }
-    @media (max-width: 850px) {
-  .card {
-    flex-direction: column;
-    text-align: center;
-    width: 70%;
-  }
-  img {
-    width: 150px;
-  }
-}
 
+    img {
+        width: 200px;
+        /*   border-radius: 20px 40px;*/
+        border-radius: 50%;
+
+    }
+
+    @media (max-width: 850px) {
+        .card {
+            flex-direction: column;
+            text-align: center;
+            width: 70%;
+        }
+
+        img {
+            width: 150px;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333333;
+        text-align: center;
+        align-items: center;
+    }
+
+    li {
+        float: left;
+        /*Esto es lo que hace que la lista se vea horizontalmente*/
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: #111111;
+    }
+
+    .desplazable {
+        background-color: black;
+        padding: 0%;
+
+
+    }
+    details{
+        
+        color: white;
+    }
 </style>
 
 <body>
-    <h1>Testimonio de cliente </h1>
-    <div class="container">
+    <nav>
+        <ul><!-- style="list-style-type:square;"para elegir si queremos que sea punto, cuadrado, guion ,etc-->
 
-        <div class="card">
-        <div class="card-photo">
-            <img src="https://randomuser.me/api/portraits/women/50.jpg" alt="imagen  de mujer">
-            <p class="nombre"> </p>
+            <li><a href="#home" title="Por el momento esto no hace nada">Home</a></li>
+            <li><a href="#news" title="esto tampoco">News</a></li>
+            <li><a href="#contact" title="ni esto">Contact</a></li>
+            <li><a href="#about" title="esto menos">About</a></li>
+
+            <details>
+                <summary>
+                    <summary class="submenu" id="arriba">Paginas</summary>
+
+                </summary>
+                <li ><a href="ejemplo.html" title="ir a la pag 1">PAGINA 1 </a></li>
+                <li ><a href="pagina2.html" title="ir a la pag 2">PAGINA 2 </a></li>
+                <li ><a href="pagina3.html" title="ir a la pag 3">PAGINA 3 </a></li>
+                <li ><a href="pagina4.html" title="ir a la pag 4">PAGINA 4 </a></li>
+                <li ><a href="pagina5.html" title="ir a la pag 5">PAGINA 5 </a></li>
+
+                <li><a href="pagina6.html" title="ir a la pag 6">PAGINA 6 </a></li>
+
+                <li ><a href="pagina7.html" title="ir a la pag 7">PAGINA 7 </a></li>
+
+                <li ><a href="pagina8.html" title="ir a la pag 8">PAGINA 8 </a></li>
+
+                <li ><a href="pagina9.html" title="ir a la pag 9">PAGINA 9 </a></li>
+
+
+
+                </det ails>
+
+        </ul>
+    </nav>
+    <section>
+        
+        <form>
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">HTML</label><br>
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css">CSS</label><br>
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+            <label for="javascript">JavaScript</label>
+        </form>
+        <form>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> I have a bike</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2"> I have a car</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="vehicle3"> I have a boat</label>
+          </form>
+          <form action="imageeee.html">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="Alan"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Echabarri"><br><br>
+            <input type="submit" value="Submit">
+          </form>
+    </section>
+
+    <article>
+        <h1>Testimonio de cliente </h1>
+        <div class="container">
+
+            <div class="card">
+                <div class="card-photo">
+                    <img src="https://randomuser.me/api/portraits/women/50.jpg" alt="imagen  de mujer">
+                    <p class="nombre"> </p>
+                </div>
+                <div class="card-info">
+                    <h2> Es una película genialmente confusa y contradictoria</h2>
+                    <p class="card-opinion">Es una película genialmente confusa y contradictoria en su forma y
+                        contenido. Toda su atmósfera rosa transmite de que será "otra película de La pelicula" pero con
+                        actores, una excusa para vestir glam o con glitter y rosado e ir con lAs niñAs a disfrutar,
+                        conectar a esa mamá o adulta joven milenial con su infancia, etc.
+                        Pero te encuentras con una trama con un alcance crítico importante al orden mundial en función
+                        de temas de género, violencia de género, estructura del patriarcado, feminismo, etc.</p>
+
+
+                    <div class="card-user">
+                        <p class="card-name"> Monica ipsum </p>
+                        <p class="card-cargo"> Empleada de comercio</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="card-photo">
+                    <img src="https://randomuser.me/api/portraits/women/56.jpg" alt="imagen  de mujer">
+                    <p class="nombre"> </p>
+                </div>
+                <div class="card-info">
+                    <h2> me sorprendió </h2>
+                    <p>mFui a ver esta película sin nigún tipo de espectativas y me sorprendió. Tiene una gran calidad
+                        audiovisual, y se nota que han trabajado duro en los decorados y vestuario. La música era muy
+                        buena y conseguía transmitir lo que la escena precisaba. Los actores de La pelicula y Ken Matgot
+                        Robbie y Ryan Gosling respectivamente son ideales para ese papel, consiguen transmitir mucho.
+                    </p>
+
+
+                    <div class="card-user">
+                        <p class="card-name"> Lorena ipsum </p>
+                        <p class="card-cargo"> Mesera</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="card-photo">
+                    <img src="https://randomuser.me/api/portraits/women/60.jpg" alt="imagen  de mujer">
+                    <p class="nombre"> Jimena</p>
+                </div>
+                <div class="card-info">
+                    <h2> ajajajajajaj</h2>
+                    <p class="card-opinion">jajajajajajaj 😜😜😜😜😜 (y la risa) es por TODA LA MERCADOTECNIA previa al
+                        estreno del que a mi parecer es el COMERCIAL MÁS GRANDE (114 minutos) para un producto y que
+                        según proyecciones para el año 2027 MATTEL tendrá ganancias por más de 14 mil millones de
+                        dólares 😯. Es decir, un incremento en ventas de los productos La pelicula de hasta un 22% a
+                        semanas de su lanzamiento 🤓.</p>
+
+
+                    <div class="card-user">
+                        <p class="card-name"> Jimena ipsum </p>
+                        <p class="card-cargo"> Enfermera</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="card-photo">
+                    <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="imagen  de mujer">
+                    <p class="nombre"> Jimena</p>
+                </div>
+                <div class="card-info">
+                    <h2> cumple </h2>
+                    <p class="card-opinion">Con el nivel de expectativa alrededor desde el anuncio del proyecto y los
+                        múltiples cambios ocurridos en el proceso (Un guion escrito por la Ganadora del Oscar Diablo
+                        Cody, Amy Schumer y Anne Hathaway en la mira para protagonizar) y sumemos una campaña
+                        publicitaria digna de estudio en las escuelas de mercadotecnia, “La pelicula” (2023) cumple con
+                        todo lo que podría esperarse de su fiesta camp.</p>
+
+
+                    <div class="card-user">
+                        <p class="card-name"> Jimena ipsum </p>
+                        <p class="card-cargo"> Maestra de prescolar</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="card-info">
-            <h2> Es una película genialmente confusa y contradictoria</h2>
-            <p class="card-opinion">Es una película genialmente confusa y contradictoria en su forma y contenido. Toda su atmósfera rosa transmite de que será "otra película de La pelicula" pero con actores, una excusa para vestir glam o con glitter y rosado e ir con lAs niñAs a disfrutar, conectar a esa mamá o adulta joven milenial con su infancia, etc.
-                Pero te encuentras con una trama con un alcance crítico importante al orden mundial en función de temas de género, violencia de género, estructura del patriarcado, feminismo, etc.</p>
-        
-        
-                <div class="card-user">
-                    <p class="card-name">   Monica ipsum         </p> 
-                    <p class="card-cargo">  sanadora de dolores</p>
-                </div>    </div>
-       
-    </div>
-    <div class="card">
-        <div class="card-photo">
-            <img src="https://randomuser.me/api/portraits/women/56.jpg" alt="imagen  de mujer">
-            <p class="nombre"> </p>
-        </div>
-        <div class="card-info">
-            <h2> me sorprendió </h2>
-            <p>mFui a ver esta película sin nigún tipo de espectativas y me sorprendió. Tiene una gran calidad audiovisual, y se nota que han trabajado duro en los decorados y vestuario. La música era muy buena y conseguía transmitir lo que la escena precisaba. Los actores de La pelicula y Ken Matgot Robbie y Ryan Gosling respectivamente son ideales para ese papel, consiguen transmitir mucho. </p>
-        
-        
-                <div class="card-user">
-                    <p class="card-name">   Lorena ipsum         </p> 
-                    <p class="card-cargo">  sanadora de dolores</p>
-                </div>    </div>
-       
-    </div>
-    <div class="card">
-        <div class="card-photo">
-            <img src="https://randomuser.me/api/portraits/women/60.jpg" alt="imagen  de mujer">
-            <p class="nombre"> Jimena</p>
-        </div>
-        <div class="card-info">
-            <h2> ajajajajajaj</h2>
-            <p class="card-opinion">jajajajajajaj  😜😜😜😜😜 (y la risa) es por TODA LA MERCADOTECNIA previa al estreno del que a mi parecer es el COMERCIAL MÁS GRANDE (114 minutos) para un producto y que según proyecciones para el año 2027 MATTEL tendrá ganancias por más de 14 mil millones de dólares 😯. Es decir, un incremento en ventas de los productos La pelicula de hasta un 22% a semanas de su lanzamiento 🤓.</p>
-        
-        
-                <div class="card-user">
-                    <p class="card-name">  Jimena ipsum         </p> 
-                    <p class="card-cargo">  sanadora de dolores</p>
-                </div>    </div>
-       
-    </div>
-    <div class="card">
-        <div class="card-photo">
-            <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="imagen  de mujer">
-            <p class="nombre"> Jimena</p>
-        </div>
-        <div class="card-info">
-            <h2> cumple </h2>
-            <p class="card-opinion">Con el nivel de expectativa alrededor desde el anuncio del proyecto y los múltiples cambios ocurridos en el proceso (Un guion escrito por la Ganadora del Oscar Diablo Cody, Amy Schumer y Anne Hathaway en la mira para protagonizar) y sumemos una campaña publicitaria digna de estudio en las escuelas de mercadotecnia, “La pelicula” (2023) cumple con todo lo que podría esperarse de su fiesta camp.</p>
-        
-        
-                <div class="card-user">
-                    <p class="card-name">  Jimena ipsum         </p> 
-                    <p class="card-cargo">  sanadora de dolores</p>
-                </div>    </div>
-       
-    </div>
-    </div>
+    </article>
 
 
 
