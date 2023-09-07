@@ -2,153 +2,17 @@
 <html lang="es">
 
 <head>
+    <link rel="stylesheet" href="style8.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Testimonios y forms</title>
 
-    <script>
-        // Array de nombres de mujer
-        const nombresMujer = ["Ana Rodriguez", "María Baez", "Laura Gamboa", "Sofía Lopez", "Elena Lopez", "Elena Murfi", "Isabel Herrera", "Lucía Diaz", "Carmen Farias", "Marta Farias", "Carmen Diaz", "Marta Perez", "Luisa Britos"];
-
-        // Función para obtener un nombre aleatorio
-        function nombreAleatorio() {
-            const indice = Math.floor(Math.random() * nombresMujer.length);
-            return nombresMujer[indice];
-        }
-
-        // Función para actualizar el contenido de todos los elementos <p> con la clase "nombre"
-        function actualizarNombres() {
-            const elementosNombre = document.querySelectorAll(".nombre");
-            elementosNombre.forEach(function (elemento) {
-                const nombre = nombreAleatorio();
-                elemento.textContent = nombre;
-                // También actualiza el contenido de <p class="card-name">
-                const card = elemento.closest(".card");
-                const cardNameElement = card.querySelector(".card-name");
-                cardNameElement.textContent = nombre;
-            });
-        }
-
-        // Ejecutar la función al cargar la página
-        window.onload = actualizarNombres;
+    <script src="pag8.js">
     </script>
 
 
 
 </head>
-<style>
-    /*SI quiero que cada bloque ocupe la mitad de la pantalla, usamos un container y usamos display:grid
-    grid-template-columns:repeat(3,1fr);    
-para que a partir de una cantidad de px cambie se usa @media(300px)
-    */
-    body {
-        background-color: indianred;
-        font-family: sans-serif;
-        text-align: center;
-    }
-
-    h1 {
-        color: white;
-        font-size: 40px;
-    }
-
-    h2 {
-        color: rgb(250, 27, 98);
-    }
-
-    .card {
-        text-align: left;
-        background-color: white;
-        width: 700px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 20px auto;
-        border: 1px solid black;
-        border-radius: 10px;
-        padding: 0px 30px;
-        width: 800px;
-        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.333);
-
-    }
-
-    .card-info {
-        padding: 50px;
-    }
-
-    .card-photo {
-        justify-content: center;
-        text-align: center;
-    }
-
-    .card-user {
-        margin: 5px 0;
-        color: gray;
-    }
-
-    .card-name {
-        font-size: 16px;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-
-    img {
-        width: 200px;
-        /*   border-radius: 20px 40px;*/
-        border-radius: 50%;
-
-    }
-
-    @media (max-width: 850px) {
-        .card {
-            flex-direction: column;
-            text-align: center;
-            width: 70%;
-        }
-
-        img {
-            width: 150px;
-        }
-    }
-
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #333333;
-        text-align: center;
-        align-items: center;
-    }
-
-    li {
-        float: left;
-        /*Esto es lo que hace que la lista se vea horizontalmente*/
-    }
-
-    li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 16px;
-        text-decoration: none;
-    }
-
-    li a:hover {
-        background-color: #111111;
-    }
-
-    .desplazable {
-        background-color: black;
-        padding: 0%;
-
-
-    }
-    details{
-        
-        color: white;
-    }
-</style>
 
 <body>
     <nav>
@@ -157,42 +21,48 @@ para que a partir de una cantidad de px cambie se usa @media(300px)
             <li><a href="#home" title="Por el momento esto no hace nada">Home</a></li>
             <li><a href="#news" title="esto tampoco">News</a></li>
             <li><a href="#contact" title="ni esto">Contact</a></li>
-            <li><a href="#about" title="esto menos">About</a></li>
+            <li><a href="https://www.w3schools.com/html/html_form_input_types.asp" title="w3schools">About</a></li>
 
             <details>
                 <summary>
                     <summary class="submenu" id="arriba">Paginas</summary>
 
                 </summary>
-                <li ><a href="ejemplo.html" title="ir a la pag 1">PAGINA 1 </a></li>
-                <li ><a href="pagina2.html" title="ir a la pag 2">PAGINA 2 </a></li>
-                <li ><a href="pagina3.html" title="ir a la pag 3">PAGINA 3 </a></li>
-                <li ><a href="pagina4.html" title="ir a la pag 4">PAGINA 4 </a></li>
-                <li ><a href="pagina5.html" title="ir a la pag 5">PAGINA 5 </a></li>
-
-                <li><a href="pagina6.html" title="ir a la pag 6">PAGINA 6 </a></li>
-
-                <li ><a href="pagina7.html" title="ir a la pag 7">PAGINA 7 </a></li>
-
-                <li ><a href="pagina8.html" title="ir a la pag 8">PAGINA 8 </a></li>
-
-                <li ><a href="pagina9.html" title="ir a la pag 9">PAGINA 9 </a></li>
-
-
+                <li><a href="ejemplo.html" title="ir a la pag 1">Headers </a></li>
+                <li><a href="pagina2.htm" title="ir a la pag 2">Hoja de vida</a></li>
+                <li><a href="pagina3.html" title="ir a la pag 3">Citas y estilos </a></li>
+                <li><a href="pagina4.html" title="ir a la pag 4">Estilos </a></li>
+                <li><a href="pagina5.html" title="ir a la pag 5">Listas y tablas </a></li>
+                <li><a href="pagina6.html" title="ir a la pag 6">Iframe</a></li>
+                <li><a href="pagina7.html" title="ir a la pag 7">Nav y semantica </a></li>
+                <li><a href="pagina8.html" title="ir a la pag 8">Refresh </a></li>
+                <li><a href="pagina9.html" title="ir a la pag 9">PAGINA 9 </a></li>
 
                 </det ails>
 
         </ul>
     </nav>
     <section>
-        
-        <form>
+        <form action="/action_page.php">
+            <label for="cars">Choose a car:</label>
+            <select id="cars" name="cars" size="3"> <!--al poner size cambia de tamaño de los visibles-->
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+            </select>
+            <input type="submit">
+        </form>
+
+        <form> <fieldset>
+            <legend>Lenguajes:</legend>
             <input type="radio" id="html" name="fav_language" value="HTML">
             <label for="html">HTML</label><br>
             <input type="radio" id="css" name="fav_language" value="CSS">
             <label for="css">CSS</label><br>
             <input type="radio" id="javascript" name="fav_language" value="JavaScript">
             <label for="javascript">JavaScript</label>
+        </fieldset>
         </form>
         <form>
             <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
@@ -201,18 +71,52 @@ para que a partir de una cantidad de px cambie se usa @media(300px)
             <label for="vehicle2"> I have a car</label><br>
             <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
             <label for="vehicle3"> I have a boat</label>
-          </form>
-          <form action="imageeee.html">
+        </form>
+        <form id="logger">
             <label for="fname">First name:</label><br>
             <input type="text" id="fname" name="fname" value="Alan"><br>
             <label for="lname">Last name:</label><br>
-            <input type="text" id="lname" name="lname" value="Echabarri"><br><br>
-            <input type="submit" value="Submit">
-          </form>
+            <input type="text" id="lname" name="lname" value="Echabarri"><br>
+            <label for="pwd">Password:</label><br>
+            <input type="password" id="pwd" name="pwd">
+            <input type="button" value="Log in" onclick="bienvenida()">
+        </form>
+        <br>
+        <textarea name="message" style="width:200px; height:100px;">Esta es una textarea 
+            </textarea>
+        <p id="mensaje"></p>
+
+        
+<fieldset>
+    <legend><p>The datalist element especifica una lista de opciones predefinidas para un elemento de entrada</p></legend>
+    <form action="/action_page.php">
+  <input list="browsers" name="browser">
+  <datalist id="browsers">
+    <option value="Internet Explorer">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+  <input type="submit">
+</form></fieldset>
+
+<form action="/action_page.php"
+  oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  0
+  <input type="range"  id="a" name="a" value="50">
+  100 +
+  <input type="number" id="b" name="b" value="50">
+  =
+  <output name="x" for="a b"></output>
+  <br><br>
+  <input type="submit">
+</form>
+
     </section>
 
     <article>
-        <h1>Testimonio de cliente </h1>
+        <h1>Testimonio de clientes </h1>
         <div class="container">
 
             <div class="card">
@@ -221,9 +125,9 @@ para que a partir de una cantidad de px cambie se usa @media(300px)
                     <p class="nombre"> </p>
                 </div>
                 <div class="card-info">
-                    <h2> Es una película genialmente confusa y contradictoria</h2>
-                    <p class="card-opinion">Es una película genialmente confusa y contradictoria en su forma y
-                        contenido. Toda su atmósfera rosa transmite de que será "otra película de La pelicula" pero con
+                    <h2> Es una página genialmente confusa y contradictoria</h2>
+                    <p class="card-opinion">Es una página genialmente confusa y contradictoria en su forma y
+                        contenido. Toda su atmósfera rosa transmite de que será "otra página de La pagina" pero con
                         actores, una excusa para vestir glam o con glitter y rosado e ir con lAs niñAs a disfrutar,
                         conectar a esa mamá o adulta joven milenial con su infancia, etc.
                         Pero te encuentras con una trama con un alcance crítico importante al orden mundial en función
@@ -244,9 +148,9 @@ para que a partir de una cantidad de px cambie se usa @media(300px)
                 </div>
                 <div class="card-info">
                     <h2> me sorprendió </h2>
-                    <p>mFui a ver esta película sin nigún tipo de espectativas y me sorprendió. Tiene una gran calidad
+                    <p>mFui a ver esta página sin nigún tipo de espectativas y me sorprendió. Tiene una gran calidad
                         audiovisual, y se nota que han trabajado duro en los decorados y vestuario. La música era muy
-                        buena y conseguía transmitir lo que la escena precisaba. Los actores de La pelicula y Ken Matgot
+                        buena y conseguía transmitir lo que la escena precisaba. Los actores de La pagina y Ken Matgot
                         Robbie y Ryan Gosling respectivamente son ideales para ese papel, consiguen transmitir mucho.
                     </p>
 
@@ -268,7 +172,7 @@ para que a partir de una cantidad de px cambie se usa @media(300px)
                     <p class="card-opinion">jajajajajajaj 😜😜😜😜😜 (y la risa) es por TODA LA MERCADOTECNIA previa al
                         estreno del que a mi parecer es el COMERCIAL MÁS GRANDE (114 minutos) para un producto y que
                         según proyecciones para el año 2027 MATTEL tendrá ganancias por más de 14 mil millones de
-                        dólares 😯. Es decir, un incremento en ventas de los productos La pelicula de hasta un 22% a
+                        dólares 😯. Es decir, un incremento en ventas de los productos La pagina de hasta un 22% a
                         semanas de su lanzamiento 🤓.</p>
 
 
@@ -289,7 +193,7 @@ para que a partir de una cantidad de px cambie se usa @media(300px)
                     <p class="card-opinion">Con el nivel de expectativa alrededor desde el anuncio del proyecto y los
                         múltiples cambios ocurridos en el proceso (Un guion escrito por la Ganadora del Oscar Diablo
                         Cody, Amy Schumer y Anne Hathaway en la mira para protagonizar) y sumemos una campaña
-                        publicitaria digna de estudio en las escuelas de mercadotecnia, “La pelicula” (2023) cumple con
+                        publicitaria digna de estudio en las escuelas de mercadotecnia, “La pagina” (2023) cumple con
                         todo lo que podría esperarse de su fiesta camp.</p>
 
 

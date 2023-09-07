@@ -1,0 +1,113 @@
+
+    /*SI quiero que cada bloque ocupe la mitad de la pantalla, usamos un container y usamos display:grid
+    grid-template-columns:repeat(3,1fr);    
+para que a partir de una cantidad de px cambie se usa @media(300px)
+    */
+    body {
+        background-color: indianred;
+        font-family: sans-serif;
+        text-align: center;
+    }
+
+    h1 {
+        color: white;
+        font-size: 40px;
+    }
+
+    h2 {
+        color: rgb(250, 27, 98);
+    }
+
+    .card {
+        text-align: left;
+        background-color: white;
+        width: 700px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 0px 30px;
+        width: 800px;
+        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.333);
+
+    }
+
+    .card-info {
+        padding: 50px;
+    }
+
+    .card-photo {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .card-user {
+        margin: 5px 0;
+        color: gray;
+    }
+
+    .card-name {
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    img {
+        width: 200px;
+        /*   border-radius: 20px 40px;*/
+        border-radius: 50%;
+
+    }
+
+    @media (max-width: 850px) {
+        .card {
+            flex-direction: column;
+            text-align: center;
+            width: 70%;
+        }
+
+        img {
+            width: 150px;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333333;
+        text-align: center;
+        align-items: center;
+    }
+
+    li {
+        float: left;
+        /*Esto es lo que hace que la lista se vea horizontalmente*/
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: #111111;
+    }
+
+    .desplazable {
+        background-color: black;
+        padding: 0%;
+
+
+    }
+
+    details {
+
+        color: white;
+    }

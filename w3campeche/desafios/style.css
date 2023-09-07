@@ -1,17 +1,27 @@
 body{
-    background-color: gray;
-    line-height: 90%;
+    background-color: lightgray;
+   
+    font-family: 'Roboto', sans-serif;
+    
 }
-img{
+article{
+    padding-top: 10px;
+    width: 600px;
+    height: 300px;
+    background-color: #f2efed;
+}
+
+#foto{
     border-radius: 50%;
 }
 .review{
     flex: auto;
     background-color: white;
-   padding:  10px; 
+    height: 220px;
+   padding:  20px; 
     align-items: center;
-    margin: auto;
-    width: 40%; 
+   margin:20px;
+    width: 515px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra con desplazamiento X, desplazamiento Y, desenfoque y color */
 
   
@@ -22,29 +32,34 @@ img{
    padding-right: 15px;
 }
 .review-info{
-    padding: 0px 0px 20px 80px ;
+    padding: 0px 0px 0px 80px ;
 }
 .review-name{
     font-weight: bold;
+    font-size:xx-large;
     margin-bottom: 3px;
+    margin-top: 0px;
    
 }
 .review-verify{
     font-size: small;
-    font-weight: bolder;
-    margin-top: 2px;
+    font-weight: 900;
+    margin-top: 0px;
+    text-shadow:0 1px 0.5px #2a5075;
 }
 .review-puntaje{
     width: 100px;
     margin: 0px;
     float: left;
     padding-right: 10px;
+    
 }
 .review-date{
     color: grey;
     width: 100px;
     margin: 0px;
-    float: left;
+    flex:2;
+   
    
 }
 .review-vistas{
@@ -53,8 +68,17 @@ img{
    
 }
 .review-text{
-    color:#768DA3;
+    color: rgb(84, 102, 109);
+    text-shadow:0 1px 0.5px #2a5075;
      
-    
-
+}
+#puntaje-fecha{
+    display: flex;
+    margin-bottom: 4px;
+}
+@media (max-width: 850px) {
+    .review-vistas{
+        color:gray;
+    }
+   
 }
