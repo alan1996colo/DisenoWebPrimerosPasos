@@ -112,8 +112,129 @@
   <br><br>
   <input type="submit">
 </form>
+<form action="/action_page.php">
+    <label for="favcolor">Select your favorite color:</label>
+    <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+    <input type="submit" value="Submit">
+  </form>
 
+  <form>
+    <label for="datemax">Enter a date before 1980-01-01:</label>
+    <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+    <label for="datemin">Enter a date after 2000-01-01:</label>
+    <input type="date" id="datemin" name="datemin" min="2000-01-02">
+  </form>
+
+  <h3>Local Date Field</h3>
+
+<p>The <strong>input type="datetime-local"</strong> specifies a date and time input field, with no time zone.</p>
+
+<form action="/action_page.php">
+  <label for="birthdaytime">Birthday (date and time):</label>
+  <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+  <input type="submit" value="Submit">
+</form>
+
+<p><strong>Note:</strong> type="datetime-local" is not supported in Internet Explorer 11 or prior Safari 14.1.</p>
+
+<form action="ejemplo.html" autocomplete="on">
+    <label for="email">Enter your email:</label>
+    <input type="email" id="email" name="email" >
+  </form>
+  <form>
+    <input type="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/640px-Heart_coraz%C3%B3n.svg.png" alt="Submit" width="48" height="48" onclick="alert('Tocaste nuestro corazon ❤️');">
+    </form>
+
+    <p>Show a file-select field which allows a file to be chosen for upload:</p>
+<form action="/action_page.php">
+  <label for="myfile">Subir un archivo:</label>
+  <input type="file" id="myfile" name="myfile"><br><br>
+  <input type="submit" value="Submit">
+</form>
+<form>
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <input type="hidden" id="custId" name="custId" value="3487">
+    <input type="submit" value="Submit">
+  </form>
+  <form>
+    <label for="quantity">Quantity (between 1 and 5):</label>
+    <input type="number" id="quantity" name="quantity" min="1" max="5">
+  </form>
     </section>
+    <form>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="0" max="100" step="10" value="30">
+      </form>
+      <form>
+        <label for="bdaymonth">Birthday (month and year):</label>
+        <input type="month" id="bdaymonth" name="bdaymonth">
+      </form>
+      <form>
+        <label for="phone">Enter your phone number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-1]{2}-[0-9]{4}-[0-9]{4}">
+      </form>
+      <form id="form1">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+      </form>
+      <label for="lname">form 1:</label> <!-- Podemos agregar input fuera del campo de formulario, siempre que el atributo form este puesto con el mismo id que el formulario.-->
+<input type="text" id="lname" name="lname" form="form1">
+
+
+<fieldset>
+    <legend><h3>The formaction Attribute
+    </h3></legend>
+<pre>The input formaction attribute specifies the URL of the file that will process the input when the form is submitted.
+
+    Note: This attribute overrides the action attribute of the <form> element.
+    
+    The formaction attribute works with the following input types: submit and image.
+    
+    </pre>
+    <form action="/action_page1.php">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="submit" value="Submit">
+        <input type="submit" formaction="/action_page2.php" value="Submit as Admin">
+      </form>
+</fieldset>
+
+<h1 >The input formenctype attribute</h1>
+
+<p>The formenctype attribute specifies how the form data should be encoded when submitted.</p>
+
+<form action="/action_page_binary.asp" method="post">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="submit" value="Submit">
+  <input type="submit" formenctype="multipart/form-data" value="Submit as Multipart/form-data">
+</form>
+<hr>
+<form action="/action_page.php">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname"><br><br>
+    <input type="submit" value="Submit">
+    <input type="submit" formtarget="_blank" value="Submit to a new window/tab">
+  </form>
+  <hr>
+  <form action="/action_page.php">
+    <label for="email">Enter your email:</label>
+    <input type="email" id="email" name="email"><br><br>
+    <input type="submit" value="Submit">
+    <input type="submit" formnovalidate="formnovalidate"
+    value="Submit without validation">
+  </form>
+  <hr>
+  <form action="/action_page.php" novalidate >
+    <label for="email">Enter your email:</label>
+    <input type="email" id="email" name="email" autofocus><br><br>
+    <input type="submit" value="Submit">
+  </form>
 
     <article>
         <h1>Testimonio de clientes </h1>
