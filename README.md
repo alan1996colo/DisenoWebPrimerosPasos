@@ -3,8 +3,8 @@ Continuando con el curso de la universidad tecnologica de campeche Y <a href=htt
 
  - [x] Tutorial de html
  - [x] Formularios de html
- - [ ] Graficos de html
- - [ ] Medios HTML
+ - [x] Graficos de html
+ - [x] Medios HTML
  - [ ] API HTML
  - [ ] CSS
  - [ ] JavaScript

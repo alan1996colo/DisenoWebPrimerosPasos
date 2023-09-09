@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>media html</title>
+        <style>
+            body{
+                background: lightblue;
+            text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+ <nav>  <a href="index.html">Volver a la pagina principal</a>
+ </nav>
+      <section><h1>media html</h1>   
+
+        <video width="320" height="240" controls> <!-- si ponemos autoplay muted se reproduce solo y solenciado -->
+            <source src="media/ejemplo_TP0.mp4" type="video/mp4">
+            
+          Your browser does not support the video tag.
+          </video>
+          <audio controls>
+            
+            <source src="media/cuack.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+          <hr>
+          <p>  Add mute=1 after autoplay=1 to let your video start playing automatically (but muted).</p>
+          <iframe width="420" height="345" src="https://www.youtube.com/embed/eMJZ02SWzlA?autoplay=1&mute=1">
+        
+        </iframe>
+        <p>Add controls=0 to not display controls in the video player.</p>
+          <hr>
+          <h2><b>Pluggins</b></h2>
+          <object width="50%" height="500px" data="index.html"></object>
+          <object width="50%" data="/media/naruto.jpg"></object>
+          <embed src="/media/arpanet.png">
+      </section>
+    
+     
+    
+    
+    
+    </body>
+</html>
