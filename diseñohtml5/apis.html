@@ -3,9 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Apis</title>
 </head>
+
+
 <body>
+    <nav>
+        <a href="media.html">Atras</a>
+    </nav>
+
+    <p>Permiteme tomar tu ubicacion</p>
     
-</body>
+    <button onclick="getLocation()">permitir</button>
+    
+    <p id="demo"></p>
+    
+    <script>
+    var x = document.getElementById("demo");
+    
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition,showError);
+      } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+    
+    function showPosition(position) {
+      x.innerHTML = "Tus coordenadas son:  <br> Latitude: " + position.coords.latitude + 
+      "<br>Longitude: " + position.coords.longitude;
+    }
+    function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "El usuario se niega a compartir la ubicacion"
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "La informacion de ubicacion no se encuentra disponible"
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred."
+      break;
+  }
+}
+    </script>
+    
+    </body>
+    
+
 </html>
