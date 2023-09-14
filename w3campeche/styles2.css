@@ -38,3 +38,12 @@ background-color: #111111;
   tr:nth-child(even) {
     background-color: #D6EEEE;
   }
+  .container{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  figcaption{
+    text-align: center;
+    font-size: xx-large;
+  }
