@@ -1,57 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apis</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apis</title>
+  <style>
+    #div1,
+    #div2 {
+      width: 350px;
+      height: 100px;
+      padding: 5px;
+      border: 1px solid #aaaaaa;
+    }
+  </style>
+  <script>
+    /*sesion storage web*/
+
+function clickCounter2() {
+  if (typeof(Storage) !== "undefined") {
+    if (sessionStorage.clickcount) {
+      sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+    } else {
+      sessionStorage.clickcount = 1;
+    }
+    document.getElementById("resultado").innerHTML = "You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+  } else {
+    document.getElementById("resultado").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+/* html local web storage*/
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+/* arrastrar y soltar imagenes*/
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+    }
+  </script>
 </head>
 
 
 <body>
-    <nav>
-        <a href="media.html">Atras</a>
-    </nav>
+  <nav>
+    <a href="media.html">Atras</a>
+  </nav>
 
-    <p>Permiteme tomar tu ubicacion</p>
-    
-    <button onclick="getLocation()">permitir</button>
-    
-    <p id="demo"></p>
-    
-    <script>
+  <p>Permiteme tomar tu ubicacion</p>
+
+  <button onclick="getLocation()">permitir</button>
+
+  <p id="demo"></p>
+
+  <script>
     var x = document.getElementById("demo");
-    
+
     function getLocation() {
       if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition,showError);
-      } else { 
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+      } else {
         x.innerHTML = "Geolocation is not supported by this browser.";
       }
     }
-    
+
     function showPosition(position) {
-      x.innerHTML = "Tus coordenadas son:  <br> Latitude: " + position.coords.latitude + 
-      "<br>Longitude: " + position.coords.longitude;
+      x.innerHTML = "Tus coordenadas son:  <br> Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
     }
     function showError(error) {
-  switch(error.code) {
-    case error.PERMISSION_DENIED:
-      x.innerHTML = "El usuario se niega a compartir la ubicacion"
-      break;
-    case error.POSITION_UNAVAILABLE:
-      x.innerHTML = "La informacion de ubicacion no se encuentra disponible"
-      break;
-    case error.TIMEOUT:
-      x.innerHTML = "The request to get user location timed out."
-      break;
-    case error.UNKNOWN_ERROR:
-      x.innerHTML = "An unknown error occurred."
-      break;
+      switch (error.code) {
+        case error.PERMISSION_DENIED:
+          x.innerHTML = "El usuario se niega a compartir la ubicacion"
+          break;
+        case error.POSITION_UNAVAILABLE:
+          x.innerHTML = "La informacion de ubicacion no se encuentra disponible"
+          break;
+        case error.TIMEOUT:
+          x.innerHTML = "The request to get user location timed out."
+          break;
+        case error.UNKNOWN_ERROR:
+          x.innerHTML = "An unknown error occurred."
+          break;
+      }
+    }
+  </script>
+
+  <p><b>arrastra la imagen hasta el rectangulo:</b></p>
+
+  <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="drag1" src="media/naruto.jpg"
+      draggable="true" ondragstart="drag(event)" width="340" height="100"></div>
+  <br>
+
+  <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<h1> What is HTML Web Storage?</h1>
+<pre>
+  With web storage, web applications can store data locally within the user's browser.
+  
+  Before HTML5, application data had to be stored in cookies, included in every server request. Web storage is more secure, and large amounts of data can be stored locally, without affecting website performance.
+  
+  Unlike cookies, the storage limit is far larger (at least 5MB) and information is never transferred to the server.
+  
+  Web storage is per origin (per domain and protocol). All pages, from one origin, can store and access the same data.</pre>
+
+
+  <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+  <div id="result"></div>
+  <p>Click the button to see the counter increase.</p>
+  <p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
+
+  <p><button onclick="clickCounter2()" type="button">Click me!</button></p>
+  <div id="resultado"></div>
+  <p>Click the button to see the counter increase.</p>
+  <p>Close the browser tab (or window), and try again, and the counter is reset.</p>
+
+
+<h1> Html web workers API</h1>
+<p>Un trabajador web es un JavaScript que se ejecuta en segundo plano, sin afectar el rendimiento de la página.</p>
+<p>Count numbers: <output id="ret"></output></p>
+<button onclick="startWorker()">Start Worker</button> 
+<button onclick="stopWorker()">Stop Worker</button>
+
+<p><strong>Note:</strong> Internet Explorer 9 and earlier versions do not support Web Workers.</p>
+
+<script>
+var w;
+
+function startWorker() {
+  if(typeof(Worker) !== "undefined") {
+    if(typeof(w) == "undefined") {
+      w = new Worker("demo_workers.js");
+    }
+    w.onmessage = function(event) {
+      document.getElementById("ret").innerHTML = event.data;
+    };
+  } else {
+    document.getElementById("ret").innerHTML = "Sorry, your browser does not support Web Workers...";
   }
 }
-    </script>
-    
-    </body>
-    
+
+function stopWorker() { 
+  w.terminate();
+  w = undefined;
+}
+</script>
+
+
+<h1>Getting server updates</h1>
+<div id="res"></div>
+
+<script>
+  if(typeof(EventSource) !== "undefined") {
+    var source = new EventSource('/sse');
+    source.onmessage = function(event) {
+      document.getElementById("res").innerHTML += event.data + "<br>";
+    };
+  } else {
+    document.getElementById("res").innerHTML = "Sorry, your browser does not support server-sent events...";
+  }
+  </script>
+</body>
+
 
 </html>
