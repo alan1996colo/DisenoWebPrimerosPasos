@@ -12,7 +12,27 @@
       height: 100px;
       padding: 5px;
       border: 1px solid #aaaaaa;
+      
     }
+
+
+nav {
+display: flex;
+background: black;
+}
+
+nav a{
+display: block;
+color: white;
+text-align: center;
+padding: 16px;
+text-decoration: none;
+font-family: 'Roboto', sans-serif;
+}
+
+nav a:hover {
+background-color: #111111;
+}
   </style>
   <script>
     /*sesion storage web*/
@@ -62,7 +82,12 @@ function clickCounter() {
 
 <body>
   <nav>
-    <a href="media.html">Ir a html media</a>
+   
+
+    <a href="../index.html">Home</a>
+    <a href="../w3campeche/pagina8.html"> Html forms</a>
+  <a href="../diseñohtml5/apis.html">Html APIs</a>
+  <a href="../w3campeche/desafios/desafio.html">Desafios</a>
   </nav>
 
   <p>Permiteme tomar tu ubicacion</p>
@@ -177,6 +202,7 @@ function stopWorker() {
     document.getElementById("res").innerHTML = "Sorry, your browser does not support server-sent events...";
   }
   </script>
+  <footer> <a href="media.html">Ir a html media</a></footer>
 </body>
 
 

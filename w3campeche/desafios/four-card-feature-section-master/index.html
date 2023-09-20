@@ -1,74 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Four card feature section</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    body{
+    body {
       font-size: 15px;
       font-family: 'Poppins', sans-serif;
-      background-color:  hsl(229, 6%, 66%)
+
     }
-    section{
-      background-color: hsl(0, 0%, 98%) ;
-      width: 1440px;
+
+    section {
+      background-color: hsl(0, 0%, 98%);
+      color: hsl(229, 6%, 66%)
+    }
+
+    .header:not(p) {
+      /*supuestamente not deberia hacer que los elementos p no adquieran ese comportamiento*/
+      margin: auto;
+      text-align: center;
      
+
     }
-    .cards{
-      display: flex;
-      flex: 1;
-      
+
+
+    @media(min-width:1000px) {
+      .header {
+        margin: auto;
+        width: 40%;
+        text-align: center;
+        font-size: x-large;
+      }
+
+      .cards {
+
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
+
+
+
+      }
+
+      .card {
+        padding: 10%;
+        margin: 20px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+      }
     }
-    .card-title{
+
+    @media (min-width: 800px) and (max-width: 1200px) {
+      .card img {
+        width: 26%;
+      }
+
+      .cards {
+
+        display: grid;
+        grid-template-columns: 1fr 10fr 10fr 10fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
+
+
+
+      }
+
+
+    }
+
+    .card {
+
       font-weight: 400;
+      padding: 10%;
+      margin: 20px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      height: 160px;
     }
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+
+    #titulo {
+      font-weight: 200;
+    }
+
+
+
+    .card img {
+      float: right;
+
+    }
+
+    .card-title {
+      font-weight: 600;
+      color: rgb(32, 32, 32);
+    }
+
+    #Supervisor {
+      border-top: solid 4px hsl(180, 62%, 55%);
+      grid-area: 2/2/4/2;
+    }
+
+    #teamBuilder {
+      border-top: solid 4pX hsl(0, 78%, 62%);
+      grid-area: 1/3/3/3;
+    }
+
+    #Karma {
+      grid-area: 3/3/5/3;
+      border-top: solid 4px hsl(34, 97%, 64%);
+    }
+
+    #Calculator {
+      border-top: solid 4px hsl(212, 86%, 64%);
+      grid-area: 2/4/4/4;
+    }
+
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+    nav {
+    display: flex;
+    background: black;
+}
+
+nav a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #111111;
+}
   </style>
 </head>
+
 <body>
- 
- 
-<section>
 
-  <div class="header"><h>
-    <h1>Reliable, efficient delivery</h1>
-    <h1>Powered by Technology</h1>
-  
-   <p> Our Artificial Intelligence powered tools use millions of project data points 
-    to ensure that your project is successful</p>
-  </div>
+  <nav>
+    <a href="../../../index.html">Home</a>
+    <a href="../../pagina8.html"> Html forms</a>
+  <a href="../../../diseñohtml5/apis.html">Html APIs</a>
+  <a href="../../desafios/desafio.html">Desafios</a>
+</nav>
 
-  <div class="cards">
-  <div class="card"><p class="card-title">Supervisor</p>
-  Monitors activity to identify project roadblocks
-</div>
-  <div class="card"><p class="card-title">Team Builder</p>
-  Scans our talent network to create the optimal team for your project
-</div>
-<div class="card">
-  <p class="card-title">Karma</p>
-  Regularly evaluates our talent to ensure quality
-</div>
-<div class="card">
- <p class="card-title"> Calculator</p>
-  Uses data from past projects to provide better delivery estimates
-</div></div>
-</section>
-  
+  <section>
+
+    <div class="header">
+
+      <h1 id="titulo">Reliable, efficient delivery</h1>
+      <h1 style="color:rgb(43, 41, 41)">Powered by Technology</h1>
+
+      <p style="font-size: 15px;"> Our Artificial Intelligence powered tools use millions of project data points
+        to ensure that your project is successful</p>
+    </div>
+
+    <div class="cards">
+      <div class="card" id="Supervisor">
+        <p class="card-title">Supervisor</p>
+        Monitors activity to identify project roadblocks
+        <div><img src="images/icon-supervisor.svg"></div>
+      </div>
+      <div class="card" id="teamBuilder">
+        <p class="card-title">Team Builder</p>
+        Scans our talent network to create the optimal team for your project
+        <div><img src="images/icon-team-builder.svg"></div>
+      </div>
+      <div class="card" id="Karma">
+        <p class="card-title">Karma</p>
+        Regularly evaluates our talent to ensure quality
+        <div><img src="images/icon-karma.svg"></div>
+      </div>
+      <div class="card" id="Calculator">
+        <p class="card-title"> Calculator</p>
+        Uses data from past projects to provide better delivery estimates
+        <div><img src="images/icon-calculator.svg"></div>
+      </div>
+    </div>
+  </section>
+
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/alan1996colo">Alan Echabarri</a>.
     </p>
   </footer>
 </body>
+
 </html>

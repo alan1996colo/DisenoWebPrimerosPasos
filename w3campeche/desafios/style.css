@@ -82,3 +82,20 @@ article{
     }
    
 }
+nav {
+    display: flex;
+    background: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #111111;
+}

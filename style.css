@@ -1,19 +1,39 @@
 body{
     background-image: url("diseñohtml5/media/bleach.gif");
 }
+
 nav {
-    display: flex;
+display: flex;
+background: black;
+}
+
+nav a{
+display: block;
+color: white;
+text-align: center;
+padding: 16px;
+text-decoration: none;
+font-family: 'Roboto', sans-serif;
+}
+
+nav a:hover {
+background-color: #111111;
+}
+footer{
     background: black;
+  display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+   
+   
+    
 }
-
-a {
-    display: block;
+#followme{
     color: white;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
+    margin: 0 20px;
 }
-
-a:hover {
-    background-color: #111111;
+#redes{
+    
 }
