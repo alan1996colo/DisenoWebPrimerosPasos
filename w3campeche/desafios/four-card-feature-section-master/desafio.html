@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Four card feature section</title>
+    <style>
+
+:root{
+--Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+
+--Very-Dark-Blue: hsl(234, 12%, 34%);
+--Grayish-Blue: hsl(229, 6%, 66%);
+--Very-Light-Gray: hsl(0, 0%, 98%);
+font-size: 15px;
+}
+
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+        p{margin-top: 0;
+            color: var(--Grayish-Blue);
+        }
+        h2{
+            font-weight: 200;
+            font-size: 2rem;
+            margin-bottom: 0;
+        }
+        .card{
+            border-radius: 2%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            border-top: solid 4px;
+            margin: 1rem;
+            padding: 2rem;
+            box-shadow: 2px 2px .3rem rgba(0, 0, 0, 0.2);
+            width:20rem ;
+        }
+        .card img{
+            align-self: flex-end;
+           
+         
+        }
+        main{
+            display: flex;
+            justify-content: center;
+        }
+        .cards{
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+            
+        }
+        .col-left, .col-right{
+            align-self:center;
+        }
+        .col-left, .col-right, .col-midle{
+            flex: 1;
+            margin: 0;
+            padding: 0;
+        }
+        .col-midle{
+            justify-content: space-around;
+        }
+        header{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+           max-width: 34rem;
+            margin: auto;
+            
+        }
+        head p{
+            flex: 1;
+           
+        }
+        h1{
+            color: var(--Very-Dark-Blue);
+            margin-top: 0;
+        }
+        body{
+            font-family: 'Poppins', sans-serif;background-color: var(--Very-Light-Gray);
+            height: 1440px;}
+            #Supervisor{
+                border-color:var(--Cyan);
+            }
+            #Calculator{
+                border-color:var(--Blue) ;
+            }
+            #TeamBuilder{
+                border-color: var(--Red);
+                margin-bottom: 2rem;
+            }
+            #Karma{
+                border-color: var(--Orange);
+            }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Reliable, efficient delivery</h2>
+        <h1>Powered by Technology</h1>
+
+        <p> Our Artificial Intelligence powered tools use millions of project data points
+            to ensure that your project is successful</p>
+    </header>
+    <main><section class="cards">
+    <section class="col-left">
+        <article class="card" id="Supervisor">
+            <h1 class="card-title" >Supervisor</h1>
+            <p> Monitors activity to identify project roadblocks</p>
+            
+            <img src="images/icon-supervisor.svg">
+        </article></section>
+        <section class="col-midle">
+        <article class="card" id="TeamBuilder">
+            <h1 class="card-title">Team Builder</h1>
+            <p>Scans our talent network to create the optimal team for your project
+            </p>
+            <img src="images/icon-team-builder.svg">
+        </article>
+
+        <article class="card" id="Karma">
+            <h1 class="card-title">Karma</h1>
+            <p>Regularly evaluates our talent to ensure quality
+            </p>
+            <img src="images/icon-karma.svg" alt="karma">
+        </article></section>
+<section class="col-right">
+        <article class="card" id="Calculator">
+            <h1 class="card-title"> Calculator</h1>
+            <p>Uses data from past projects to provide better delivery estimates
+            </p>
+            <img src="images/icon-calculator.svg" alt="Calculator">
+        </article>
+
+
+    </section></section>
+</main>
+    <footer>
+        <p class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="https://github.com/alan1996colo">Alan Echabarri</a>.
+        </p>
+    </footer>
+</body>
+
+</html>
