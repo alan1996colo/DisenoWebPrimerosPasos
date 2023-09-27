@@ -117,13 +117,38 @@ font-size: 13px;    }
       background-color: var(--White);
       grid-area: 1/4/3/5;
     }
+
+    nav {
+    display: flex;
+    background: black;
+}
+
+nav a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-size: medium;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav a:hover {
+    background-color: #111111;
+}
    
 
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body><main>
+<body><nav>
+  <a href="../../../index.html">Home</a>
+  <a href="../../pagina8.html"> Html forms</a>
+<a href="../../../diseñohtml5/apis.html">Html APIs</a>
+<a href="../../desafios/desafio.html">Desafios</a>
+</nav>
+  <main>
   <section class="container">
 
  <article class="card lighter" id="clifford">
@@ -211,6 +236,7 @@ font-size: 13px;    }
 </article></section>
 </main>
   <div class="attribution">
+    Siguiente desafio <a href="../news-homepage-main/index.html">new HomePage</a>
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/alan1996colo">Alan Echabarri</a>.
   </div>
