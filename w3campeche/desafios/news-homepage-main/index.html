@@ -1,136 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | News homepage</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .piso{display: flex;
-    grid-area: 3/1/4/4;}
+    :root {
+      /*Primary*/
 
-    main{
+      --Soft-orange: hsl(35, 77%, 62%);
+      --Soft-red: hsl(5, 85%, 63%);
+
+      /*Neutral*/
+
+      --Off-white: hsl(36, 100%, 99%);
+      --Grayish-blue: hsl(233, 8%, 79%);
+      --Dark-grayish-blue: hsl(236, 13%, 42%);
+      --Very-dark-blue: hsl(240, 100%, 5%);
+      font-size: 15px;
+    }
+
+    .noticias {
+      background: var(--Very-dark-blue);
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      justify-content: space-around;
+    }
+
+    .noticias h2 {
+      color: var(--Soft-orange);
+      font-size: 2rem;
+    }
+
+    .noticias section a {
+      color: var(--Off-white);
+      text-decoration: none;
+    }
+
+    .noticias section a:hover {
+      color: var(--Soft-orange);
+
+    }
+
+    body {
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      height: 1440px;
+    }
+
+    p,
+    hr {
+      color: var(--Dark-grayish-blue);
+      border-color: var(--Dark-grayish-blue);
+    }
+
+    .piso {
+      display: flex;
+      grid-area: 3/1/4/4;
+      padding: 0 1rem;
+      margin: 0 auto;
+      
+    }
+
+    .piso article {
+      display: flex;
+      flex: 1;
+    }
+
+    .piso section {
+      padding: 1rem;
+
+    }
+
+    .piso h2 {
+      color: var(--Grayish-blue);
+    
+    }
+
+    .piso a {
+      color: black;
+      text-decoration: none;
+    }
+
+    .piso a:hover {
+      color: var(--Soft-red);
+    }
+
+    .piso article section {
+      flex: 2;
+    }
+
+    .piso article header {
+      flex: 1;
+    }
+
+    .piso article header img {
+      width: 100%;
+    }
+
+    .piso article {
+      align-items: center;
+    }
+
+    .piso article header img {
+      width: 120px;
+    }
+   
+
+    main {
       display: grid;
-      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-rows: 40% 30% 30%;
       grid-template-columns: 1fr 1fr 1fr;
+      margin: auto 8rem;
+
     }
-    .head{
+
+    .head {
       grid-area: span 1/ span 2;
+
+      padding: 0 1rem;
+
     }
-    .centro{
+
+    .pic img {
+      max-width: 100%;
+
+      max-height: auto;
+      overflow: hidden;
+    }
+
+    .centro {
       order: 1;
       grid-area: span 1/ span 2;
+      display: flex;
+      flex: 1;
+      padding: 0 1rem;
+      margin: 0 auto;
+
+
 
     }
-    aside{
+
+    .centro h2 {
+      font-size: 3rem;
+    }
+
+    .centro a {
+      background-color: var(--Soft-red);
+      color: var(--Off-white);
+      padding: 1rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-right: auto;
+      font-weight: 700;
+      text-decoration: none;
+
+    }
+
+    .centro a:hover {
+      background-color: var(--Very-dark-blue);
+    }
+
+    .centro section {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      font-size: 1rem;
+      flex: 1;
+    }
+
+    .centro header {
+      flex: 1;
+    }
+
+    aside {
       grid-area: span 2/ span 1;
+      padding: 1rem;
+      margin: 1rem;
     }
-nav {
-    display: flex;
-    background: black;
-    font-size: 'Roboto', sans-serif;
 
+    .principal {
+      display: flex;
+      background: black;
+      font-size: 'Roboto', sans-serif;
+
+    }
+
+    .principal a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+    }
+
+    .principal a:hover {
+      background-color: #111111;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+
+      margin: auto 9rem;
+    }
+
+
+    .actual {
+      display: flex;
+      align-items: center;
+
+    }
+
+    .actual a {
+      display: block;
+      padding: 1rem;
+      text-decoration: none;
+      color: var(--Grayish-blue);
+      text-align: center;
+
+    }
+
+    .actual a:hover {
+      color: var(--Soft-red);
+    }
+    @media(min-width:1000px){
+      #mobile{
+        display: none;
+      }
+    }
+
+    @media(max-width:1000px) {
+      body {
+     height: 375px;
+      }
+      main{
+        margin: auto;
+        display: flex;  
+      flex-direction: column; 
+    flex-wrap: wrap;   }
+#desktop{
+  display: none;
 }
 
-nav a{
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-}
-
-nav a:hover {
-    background-color: #111111;
-}
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .centro{
+      order: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .piso{
+      display: flex;
+      flex-direction: column;
+    }
+    }
   </style>
 </head>
+
 <body>
 
-  <nav>
+  <nav class="principal">
     <a href="../../../index.html">Home</a>
     <a href="../../pagina8.html"> Html forms</a>
-  <a href="../../../diseñohtml5/apis.html">Html APIs</a>
-  <a href="../../desafios/desafio.html">Desafios</a>
-</nav>
-<nav style="background-color: white;color:gray;">
-  Home
-  New
-  Popular
-  Trending
-  Categories
-</nav>
-<main>
-  <article class="head"><h1>W.</h1>
-    <img src="./assets/images/image-web-3-desktop.jpg" width="100%">
-  </article>
-  <article class="centro">
- <h2> The Bright Future of Web 3.0?</h2>
-<section>
-  <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-  But is it really fulfilling its promise?
-</p>
-  <a>Read more</a>
-</section></article>
- <aside><h2> New</h2> 
-<section>
-  <h3>Hydrogen VS Electric Cars</h3>
-  <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
-</section>
-<section>
-  <h3> Downsides of AI Artistry</h3>
-  <p>What are the possible adverse effects of on-demand AI image generation?</p>
-</section><section>
-<h3>  Is VC Funding Drying Up?</h3>
-  <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
-</section>
-</aside>
-<div class="piso">
-<article>
-  <img>
-<section>  <h2>01
-</h2>
-  <h3>  Reviving Retro PCs
-  </h3>
-  <p>  What happens when old PCs are given modern upgrades?
-  </p>
-</section>
-</article>
+    <a href="../../../diseñohtml5/apis.html">Html APIs</a>
+    <a href="../../desafios/desafio.html">Desafios</a>
+  </nav>
+  <div class="header">
+    <h1>W.</h1>
+    <nav class="actual">
+      <a href="#1">Home</a>
+      <a href="#1">New</a>
+      <a href="#1">Popular</a>
+      <a href="#1"> Trending</a>
+      <a href="#1">Categories</a>
+    </nav>
+  </div>
 
-<article>
-  <img>
-<section>  <h2>02
-</h2>
-  <h3>  Top 10 Laptops of 2022
-  </h3>
-  <p>  Our best picks for various needs and budgets.
-  </p>
-</section>
-</article>
+  <main>
+    <article class="head">
+      <div class="pic">
 
-<article>
-  <img>
-<section>  <h2>03
-</h2>
-  <h3>  The Growth of Gaming
-  </h3>
-  <p>  How the pandemic has sparked fresh opportunities.
-  </p>
-</section>
-</article>
-</div>
-  
-  
-  </main>  
+        <img id="desktop" src="assets/images/image-web-3-desktop.jpg">
+        <img id="mobile" src="assets/images/image-web-3-mobile.jpg">
+      </div>
+
+    </article>
+    <article class="centro">
+      <header>
+        <h2> The Bright Future of Web 3.0?</h2>
+      </header>
+      <section>
+        <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands
+          of the people.
+          But is it really fulfilling its promise?
+        </p>
+        <a href="https://github.com/alan1996colo">Read more</a>
+      </section>
+    </article>
+    <aside class="noticias">
+      <h2> New</h2>
+      <section>
+        <h3><a href="https://news.google.com/">Hydrogen VS Electric Cars</a></h3>
+        <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+        <hr>
+      </section>
+
+      <section>
+        <h3><a href="https://news.google.com/"> Downsides of AI Artistry</a></h3>
+        <p>What are the possible adverse effects of on-demand AI image generation?</p>
+        <hr>
+      </section>
+
+      <section>
+        <h3> <a href="https://news.google.com/"> Is VC Funding Drying Up?</a></h3>
+        <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+      </section>
+    </aside>
+    <div class="piso">
+      <article>
+        <header>
+          <img src="assets/images/image-retro-pcs.jpg">
+        </header>
+        <section>
+          <h2>01
+          </h2>
+          <h3> <a href="https://www.facebook.com/">Reviving Retro PCs</a>
+          </h3>
+          <p> What happens when old PCs are given modern upgrades?
+          </p>
+        </section>
+      </article>
+
+
+      <article>
+        <header>
+          <img src="assets/images/image-top-laptops.jpg">
+        </header>
+        <section>
+          <h2>02
+          </h2>
+          <h3> <a href="https://www.facebook.com/">Top 10 Laptops of 2022</a>
+          </h3>
+          <p> Our best picks for various needs and budgets.
+          </p>
+        </section>
+      </article>
+
+      <article>
+        <header>
+          <img src="assets/images/image-gaming-growth.jpg">
+        </header>
+        <section>
+          <h2>03
+          </h2>
+          <h3> <a href="https://www.facebook.com/">The Growth of Gaming </a>
+          </h3>
+          <p> How the pandemic has sparked fresh opportunities.
+          </p>
+        </section>
+      </article>
+    </div>
+
+
+  </main>
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/alan1996colo">Alan Echabarri</a>.
   </footer>
 </body>
+
 </html>
