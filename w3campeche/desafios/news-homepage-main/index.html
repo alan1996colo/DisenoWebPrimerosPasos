@@ -70,7 +70,7 @@
       grid-area: 3/1/4/4;
       padding: 0 1rem;
       margin: 0 auto;
-      
+
     }
 
     .piso article {
@@ -85,7 +85,7 @@
 
     .piso h2 {
       color: var(--Grayish-blue);
-    
+
     }
 
     .piso a {
@@ -116,7 +116,7 @@
     .piso article header img {
       width: 120px;
     }
-   
+
 
     main {
       display: grid;
@@ -221,8 +221,8 @@
     .header {
       display: flex;
       justify-content: space-between;
-
-      margin: auto 9rem;
+      padding: 2rem 0rem 2rem 1rem;
+      margin: auto 8rem;
     }
 
 
@@ -230,50 +230,131 @@
       display: flex;
       align-items: center;
 
+
     }
 
     .actual a {
       display: block;
-      padding: 1rem;
+      padding: 1rem 0 1rem 3rem;
       text-decoration: none;
       color: var(--Grayish-blue);
-      text-align: center;
+      text-align: end;
 
     }
 
     .actual a:hover {
       color: var(--Soft-red);
     }
-    @media(min-width:1000px){
-      #mobile{
+
+    #logo {
+      align-self: center;
+      justify-self: center;
+    }
+
+    @media(min-width:1000px) {
+      #mobile ,  #cruz, #menu {
         display: none;
       }
     }
 
     @media(max-width:1000px) {
       body {
-     height: 375px;
+        height: 375px;
       }
-      main{
-        margin: auto;
-        display: flex;  
-      flex-direction: column; 
-    flex-wrap: wrap;   }
-#desktop{
-  display: none;
-}
 
-    .centro{
-      order: 0;
-      display: flex;
-      flex-direction: column;
-    }
-    .piso{
-      display: flex;
-      flex-direction: column;
-    }
+      .header {
+        margin: 1rem;
+        padding: 2rem 0px;
+      }
+
+      .container {
+
+        display: none;
+        justify-content: end;
+        background-color: rgba(99, 99, 99, 0.5);
+
+        width: 100%;
+        position: absolute;
+        right: 0%;
+        top: 0%;
+        height: 100%;
+      }
+
+      .actual {
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        background-color: var(--Off-white);
+        justify-content: center;
+        font-weight: 400;
+        width: 70%;
+        font-size: 1.2rem;
+      }
+
+      .actual a {
+
+        display: flex;
+        padding: 1rem;
+        text-decoration: none;
+        text-align: left;
+        color: #111111;
+      }
+
+      .cerrar {
+        margin: 0;
+        padding: 0%;
+        position: relative;
+        bottom: 20%;
+        left: 80%;
+      }
+
+      .centro section {
+        padding: 0;
+
+
+      }
+
+      .noticias {
+        display: flex;
+        margin: 1rem;
+      }
+
+      main {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      #desktop {
+        display: none;
+      }
+
+
+      .centro {
+        order: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .piso {
+        display: flex;
+        flex-direction: column;
+      }
     }
   </style>
+  <script>
+   function mostrarmenu(){
+  const container = document.querySelector(".container");
+  container.style.display = "flex";
+}
+function ocultarmenu(){
+  const lala=document.querySelector(".container");
+  lala.style.display="none";
+}
+  </script>
 </head>
 
 <body>
@@ -285,14 +366,20 @@
     <a href="../../desafios/desafio.html">Desafios</a>
   </nav>
   <div class="header">
-    <h1>W.</h1>
-    <nav class="actual">
-      <a href="#1">Home</a>
-      <a href="#1">New</a>
-      <a href="#1">Popular</a>
-      <a href="#1"> Trending</a>
-      <a href="#1">Categories</a>
-    </nav>
+    <img id="logo" src="assets/images/logo.svg">
+    <div class="container">
+      <nav class="actual">
+
+        <div class="cerrar"> <img id="cruz" src="assets/images/icon-menu-close.svg" onclick="ocultarmenu()">
+        </div>
+        <a href="../../../index.html">Home</a>
+        <a href="https://news.google.com/">New</a>
+        <a href="https://github.com/alan1996colo/Tp2Prg">Popular</a>
+        <a href="https://twitter.com/alan1996colo"> Trending</a>
+        <a href="https://github.com/alan1996colo">Categories</a>
+      </nav>
+    </div>
+    <img id="menu" src="assets/images/icon-menu.svg" onclick="mostrarmenu()" >
   </div>
 
   <main>
@@ -306,12 +393,12 @@
     </article>
     <article class="centro">
       <header>
-        <h2> The Bright Future of Web 3.0?</h2>
+        <h2> Es esta pagina responsiva?</h2>
       </header>
       <section>
-        <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands
-          of the people.
-          But is it really fulfilling its promise?
+        <p>
+          El objetivo de este ejercicio es practicar nuestro css grid en conjunto con flex, y ademas usar semantica html para hacer esta pagina de estilo de noticias.
+          
         </p>
         <a href="https://github.com/alan1996colo">Read more</a>
       </section>
@@ -319,20 +406,20 @@
     <aside class="noticias">
       <h2> New</h2>
       <section>
-        <h3><a href="https://news.google.com/">Hydrogen VS Electric Cars</a></h3>
-        <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+        <h3><a href="https://news.google.com/">Con css "display: none"</a></h3>
+        <p>Se pudo ocultar elementos para mobile o desktop segun corresponda</p>
         <hr>
       </section>
 
       <section>
-        <h3><a href="https://news.google.com/"> Downsides of AI Artistry</a></h3>
-        <p>What are the possible adverse effects of on-demand AI image generation?</p>
+        <h3><a href="https://news.google.com/"> Con JavaScript</a></h3>
+        <p>Fue posible realizar la interaccion de mostrar y ocultar el menu</p>
         <hr>
       </section>
 
       <section>
-        <h3> <a href="https://news.google.com/"> Is VC Funding Drying Up?</a></h3>
-        <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+        <h3> <a href="https://news.google.com/"> Con css Hover</a></h3>
+        <p>Se pudo marcar y resaltar los textos señalados con el puntero del mouse</p>
       </section>
     </aside>
     <div class="piso">
