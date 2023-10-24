@@ -14,7 +14,7 @@ body {
   }
   
   a:visited {
-    color: pink;/*Despues de visitar*/
+    color: rgb(202, 9, 41);/*Despues de visitar*/
     background-color: transparent;
     text-decoration: none;
   }
