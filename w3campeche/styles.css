@@ -1,35 +1,16 @@
-body {
-    background-color: powderblue;
-  }
-  h1 {/*todos los headers 1 en azul*/
-    color: blue;
-  }
-  p {/*Todos los parrafos en rojo*/
-    color: red;
-  }
-  a:link {/*Por defecto*/
-    color: green;
-    background-color: transparent;
-    text-decoration: none;
-  }
-  
-  a:visited {
-    color: rgb(202, 9, 41);/*Despues de visitar*/
-    background-color: transparent;
-    text-decoration: none;
-  }
-  
-  a:hover {/*Cuando se señala*/
-    color: red;
-    background-color: transparent;
-    text-decoration: underline;/*subrayado*/
-  }
-  
-  a:active {/*cuando se presiona*/
-    color: yellow;
-    background-color: transparent;
-    text-decoration: underline;
-  }
-  table, th, td {
-    border: 1px solid black;
-  }
+.tachado {
+  text-decoration: line-through;
+}
+.tareas{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-self: center;
+  text-shadow: red 2px 1px 1px;
+}
+#listaTareas{
+background-color: rgba(177, 155, 155, 0.5);
+list-style-type: none;
+padding-left: 0;
+
+}
