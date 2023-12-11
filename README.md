@@ -7,9 +7,9 @@ Continuando con el curso de la universidad tecnologica de campeche Y <a href=htt
  - [x] Medios HTML
  - [x] API HTML
  - [x] CSS
- - [x] Bootstrap   <--
+ - [x] Bootstrap  
  - [x] JavaScript
- - [ ] vue.js
+ - [ ] vue.js  <--
  - [ ] Angular
  
  

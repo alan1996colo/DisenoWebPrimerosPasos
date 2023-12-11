@@ -1,0 +1,25 @@
+body{
+    background-color: green;
+    font-family: roboto,sans-serif;
+}
+#root{}
+.card{
+    border: 5px solid red;
+    width: 300px;
+    border-radius: 15px;
+    background-color: aliceblue;
+}
+.card-photo{
+    width: 100%;
+
+}
+.card-title{
+    text-align: center;
+}
+.card-info{
+    padding: 20px;
+    display: flex;
+    justify-content: start;
+
+
+}
